@@ -1,42 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_nbr_U.c                                   :+:      :+:    :+:   */
+/*   ft_print_hex_low.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:36:30 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/11/08 15:37:51 by yes-slim         ###   ########.fr       */
+/*   Created: 2022/11/08 18:43:53 by yes-slim          #+#    #+#             */
+/*   Updated: 2022/11/09 13:33:17 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static int	len(int nb)
+void	ft_print_hex_low(unsigned int i, int *len)
 {
-	int	l;
+	char	*hex;
 
-	l = 0;
-	while (nb)
-	{
-		nb /= 10;
-		l++;
-	}
-	return (l);
-}
-
-int	ft_print_nbr_U(unsigned int nb)
-{
-	int	l;
-
-	if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else if (nb >= 0 && nb <= 9)
-	{
-		ft_putchar(nb + '0');
-	}
-	return (l = len(nb));
+	hex = "0123456789abcdef";
+	if (i >= 16)
+		ft_print_hex_low((i / 16), len);
+	ft_print_char(hex[i % 16], len);
 }

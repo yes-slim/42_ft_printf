@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev.c                                           :+:      :+:    :+:   */
+/*   ft_print_adr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:46:33 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/11/08 16:01:44 by yes-slim         ###   ########.fr       */
+/*   Created: 2022/11/08 18:50:49 by yes-slim          #+#    #+#             */
+/*   Updated: 2022/11/09 13:33:11 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-char	*ft_rev(char *str)
+void	ft_print_adr(unsigned long l, int *len)
 {
-	int		i;
-	int		len;
-	char	tmp;
+	char	*hex;
 
-	i = 0;
-	len = ft_strlen(str) - 1;
-	while (i < len)
-	{
-		tmp = str[i];
-		str[i] = str[len];
-		str[len] = tmp;
-		i++;
-		len--;
-	}
-	return (str);
+	hex = "0123456789abcdef";
+	if (l >= 16)
+		ft_print_adr((l / 16), len);
+	ft_print_char(hex[l % 16], len);
 }

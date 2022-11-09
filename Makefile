@@ -6,21 +6,26 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 19:11:52 by yes-slim          #+#    #+#              #
-#    Updated: 2022/11/08 13:59:41 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/11/09 10:36:41 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = cc 
-
 CFLAGS = -Wall -Werror -Wextra -c
 
-NAME = libprintf.a
+NAME = libftprintf.a
 
 LIBF = ar -rc
 
-DEL = rm -rf
+DEL = rm -f
 
-CSRCS =
+CSRCS = ft_printf.c\
+		ft_print_char.c\
+		ft_print_str.c\
+		ft_print_nbr.c\
+		ft_print_nbr_uns.c\
+		ft_print_hex_low.c\
+		ft_print_hex_up.c\
+		ft_print_adr.c\
 		
 OBJF = $(CSRCS:.c=.o)
 

@@ -5,22 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:27:52 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/11/08 15:29:45 by yes-slim         ###   ########.fr       */
+/*   Created: 2022/11/08 18:21:19 by yes-slim          #+#    #+#             */
+/*   Updated: 2022/11/09 13:56:15 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_print_str(char *str)
+void	ft_print_str(char *str, int *len)
 {
 	int	i;
 
-	i = 0;
-	while (str[i])
+	if (str)
 	{
-		write(1, &str[i], 1);
-		i++;
+		i = 0;
+		while (str[i])
+		{
+			ft_print_char(str[i], len);
+			i++;
+		}
 	}
-	return (i);
+	else
+		(*len) += write(1, "(null)", 6);
 }
