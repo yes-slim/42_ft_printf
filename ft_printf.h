@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:07:03 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/11/09 13:53:38 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/10 12:41:35 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
 # include <limits.h>
+# include <unistd.h>
 # include <stdarg.h>
 
 int		ft_printf(const char *str, ...);

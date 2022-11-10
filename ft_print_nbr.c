@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:27:34 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/11/09 14:06:30 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:55:51 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_print_nbr(int i, int *len)
 {

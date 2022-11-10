@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:19:30 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/11/09 13:33:15 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/09 16:26:42 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_print_char(char c, int *len)
 {
