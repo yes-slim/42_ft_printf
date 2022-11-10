@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:07:03 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/11/10 12:41:35 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:24:43 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <limits.h>
+# include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
 
