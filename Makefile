@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 19:11:52 by yes-slim          #+#    #+#              #
-#    Updated: 2023/06/17 21:11:08 by yes-slim         ###   ########.fr        #
+#    Updated: 2023/06/17 21:31:10 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJF)
 	@ar -rc $(NAME) $(OBJF)
+	@echo $(cyan)$(underline)"libftprintf is ready to use" $(reset)
 
 clean :
 	@$(DEL) $(OBJF)
